@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<div class="center">
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">AppPedia</h1>
+          <p class="lead text-muted">A catalog of apps.</p>
+          <p>
+            <a href="/pages/login" class="btn btn-primary">Login</a>
+            <a href="/pages/signup" class="btn btn-secondary">Create Account</a>
+            <br/><br/><%= link_to 'Add New Application', new_application_path, class: "btn btn-outline-secondary" %>
+          </p>
+        </div>
+      </section>
+        <div class="album text-muted">
+        <div class="container">
+        <div class="row">
+    <% @applications.each do |application| %>
+        <div class="card">
+            <div class="thumbnail">
+                <%= image_tag application.image.url, class: "col-md-8" %>
+            <br/><br/>
+          <p class="card-text"><strong><%= application.name %></strong><br/>
+              <%= application.description %><br/>
+              <%= number_to_currency(application.price) %><br/>
+              <%= link_to 'Show', application, class: "btn btn-link" %>
+              <%= link_to 'Edit', edit_application_path(application), class: "btn btn-link" %>
+              <%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+            </p>
+                </div>
+        </div>
+<!--
+      <tr>
+        <td><%= application.link %></td>
+        <td><%= application.status %></td>
+      </tr>
+-->
+    <% end %>
+            </div>
+        </div>
+      </div>
+
+    </main>
+    </div>
