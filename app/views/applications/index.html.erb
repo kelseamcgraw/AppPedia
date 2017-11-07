@@ -4,12 +4,22 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">AppPedia Changes</h1>
+          <h1 class="jumbotron-heading">AppPedia</h1>
           <p class="lead text-muted">A catalog of apps.</p>
           <p>
+            <% if user_signed_in? %>
+                <%= link_to 'Edit Profile', edit_user_registration_path, class: "btn btn-primary" %>
+                <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "btn btn-secondary" %>
+              <br/><br/><%= link_to 'Add New Application', new_application_path, class: "btn btn-outline-secondary" %>
+            <% else %>
+                <%= link_to 'Login', new_user_session_path, class: "btn btn-primary" %>
+                <%= link_to 'Create Account', new_user_registration_path, class: "btn btn-secondary" %>
+            <% end %>
+<!--
             <a href="/pages/login" class="btn btn-primary">Login</a>
             <a href="/pages/signup" class="btn btn-secondary">Create Account</a>
-            <br/><br/><%= link_to 'Add New Application', new_application_path, class: "btn btn-outline-secondary" %>
+-->
+            
           </p>
         </div>
       </section>
@@ -26,7 +36,7 @@
               <%= number_to_currency(application.price) %><br/>
               <%= link_to 'Show', application, class: "btn btn-link" %>
               <%= link_to 'Edit', edit_application_path(application), class: "btn btn-link" %>
-              <%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+<!--              <%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>-->
             </p>
                 </div>
         </div>

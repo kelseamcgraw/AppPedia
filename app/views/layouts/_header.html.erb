@@ -14,9 +14,15 @@
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form> -->
                 <h3 class="text-white">Search Applications</h3>
-                <%= form_tag applications_path, :method => 'get' do %>
-                <%= text_field_tag :search, params[:search]%>
-                <%= submit_tag "search" %>
+                <div class="row">
+                    <div class="col">
+                        <%= form_tag applications_path, :method => 'get' do %>
+                        <%= text_field_tag :search, params[:search], class: "form-control form-control-sm", placeholder: "Search"%>
+                    </div>
+                    <div class="col">
+                        <%= submit_tag "Search", class: "btn btn-light btn-sm" %>
+                    </div>
+                </div>
                 <% end %>
                 <br/>
                 <h4 class="text-white">Filter</h4>
