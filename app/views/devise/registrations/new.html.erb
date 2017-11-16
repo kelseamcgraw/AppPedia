@@ -10,6 +10,12 @@
     <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password (6 characters minimum)" %>
     <%= f.label :password_confirmation, class: "sr-only" %>
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control", placeholder: "Password confirmation" %>
+    <div class="form-group">
+        <%= f.label :avatar, class: 'col-sm-2 control-label'  %>
+        <div class="col-sm-6">
+            <%= f.file_field :avatar %>
+        </div>
+    </div>
     <div class="checkbox">
       <label>
         <input type="checkbox" value="remember-me"> Send me emails about new apps.
