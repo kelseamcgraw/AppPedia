@@ -11306,3 +11306,34 @@ Migrating to InstallCommontator (20171127025136)
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+Started GET "/" for 127.0.0.1 at 2017-11-27 14:27:21 -0500
+  [1m[35m (14.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (64.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 9589ms (Views: 9556.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/applications/1" for 127.0.0.1 at 2017-11-27 14:27:34 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  Rendered applications/show.html.erb within layouts/application (30.1ms)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `thread' for nil:NilClass):
+    10:     <div class="col-md-6">
+    11:         <h3><%= @application.name %></h3>
+    12:         <p><%= number_to_currency(@application.price) %></p>
+    13: 	<p><%= commontator_thread(@commontable) %></p>
+    14:         <p><%= @application.description %></p>
+    15:         <a href="http://<%= @application.link %>" target="_blank">Buy app</a>
+    16:     </div>
+  
+app/views/applications/show.html.erb:13:in `_app_views_applications_show_html_erb___2934295741615871367_70312549561820'
