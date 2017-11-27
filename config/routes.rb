@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :applications
   
+  #mount Commontator::Engine => '/commontator'
+  
   get 'pages/login'
 
   get 'pages/signup'
