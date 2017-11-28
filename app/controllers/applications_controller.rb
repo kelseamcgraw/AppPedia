@@ -4,8 +4,7 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
-    # @applications = Application.where(["name LIKE ?","%#{params[:search]}%"])
-    @applications = Application.search(params[:search])
+    @applications = Application.where(["name LIKE ?","%#{params[:search]}%"])
   end
 
   # GET /applications/1

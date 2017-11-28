@@ -4,12 +4,10 @@ Rails.application.routes.draw do
   get 'pages/appRequests'
 
   devise_for :users
-  resources :searches
   resources :applications
-
-
+  
   #mount Commontator::Engine => '/commontator'
-
+  
   get 'pages/login'
 
   get 'pages/signup'
