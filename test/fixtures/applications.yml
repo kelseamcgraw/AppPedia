@@ -1,21 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  description: MyText
+weather:
+  name: Weather
+  description: Tells you the weather
   price: 9.99
-  link: MyString
+  link: www.weather.com
   status: false
   platform: Android
   version: 1.0.0
   developer: Alyssa Melendez
 
-two:
-  name: MyString
-  description: MyText
-  price: 9.99
-  link: MyString
-  status: false
+groupme:
+  name: GroupMe
+  description: A group messaging app
+  price: 0.99
+  link: www.groupme.com
+  status: true
   platform: Apple
   version: 2.0.0
   developer: Kelsea McGraw
