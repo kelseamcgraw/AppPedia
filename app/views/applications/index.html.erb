@@ -24,10 +24,18 @@
         </div>
       </section>
         <div class="album text-muted">
+            <% if user_signed_in? %>
+                <h3>Approved Apps</h3>
+                <br>
+            <% end %>
         <div class="container">
         <div class="row">
+            
+
     <% @applications.each do |application| %>
-        <div class="card">
+            
+            <% if application.status == true %>
+              <div class="card">
             <div class="thumbnail">
                 <%= image_tag application.image.url, class: "col-md-8" %>
             <br/><br/>
@@ -43,11 +51,15 @@
               <%= link_to 'Show', application, class: "btn btn-link" %>
               <%= link_to 'Comments', commontator_thread(application), class: "btn btn-link" %>
             <% end %>
-              
+
 <!--              <%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>-->
             </p>
                 </div>
         </div>
+            <% else %>
+
+            <% end %>
+        
 <!--
       <tr>
         <td><%= application.link %></td>
@@ -55,6 +67,36 @@
       </tr>
 -->
     <% end %>
+            </div>
+            </div>
+                <% if user_signed_in? %>
+                <h3>Not Approved Apps</h3>
+                <br>
+            
+                <div class="container">
+                    <div class="row">
+    <!--            For not approved apps-->
+                <% @applications.each do |application| %>
+
+                <% if application.status != true %>
+                  <div class="card">
+                <div class="thumbnail">
+                    <%= image_tag application.image.url, class: "col-md-8" %>
+                <br/><br/>
+              <p class="card-text"><strong><%= application.name %></strong><br/>
+                  <%= application.description %><br/>
+                  <%= number_to_currency(application.price) %><br/>
+
+    <!--              User is already signed in, so don't need check here-->
+                    <%= link_to 'Show', application, class: "btn btn-link" %>
+                    <%= link_to 'Edit', edit_application_path(application), class: "btn btn-link" %>
+                </p>
+                    </div>
+            </div>
+                <% end %>
+        <% end %>
+    <% end %>
+            
             </div>
         </div>
       </div>
