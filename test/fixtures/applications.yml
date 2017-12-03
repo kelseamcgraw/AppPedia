@@ -6,6 +6,9 @@ one:
   price: 9.99
   link: MyString
   status: false
+  platform: Android
+  version: 1.0.0
+  developer: Alyssa Melendez
 
 two:
   name: MyString
@@ -13,3 +16,6 @@ two:
   price: 9.99
   link: MyString
   status: false
+  platform: Apple
+  version: 2.0.0
+  developer: Kelsea McGraw

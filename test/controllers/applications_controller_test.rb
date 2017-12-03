@@ -17,7 +17,7 @@ class ApplicationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create application" do
     assert_difference('Application.count') do
-      post applications_url, params: { application: { description: @application.description, link: @application.link, name: @application.name, price: @application.price, status: @application.status } }
+      post applications_url, params: { application: { description: @application.description, link: @application.link, name: @application.name, price: @application.price, status: @application.status, platform: @application.platform, version: @application.version, developer: @application.developer } }
     end
 
     assert_redirected_to application_url(Application.last)
@@ -34,7 +34,7 @@ class ApplicationsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update application" do
-    patch application_url(@application), params: { application: { description: @application.description, link: @application.link, name: @application.name, price: @application.price, status: @application.status } }
+    patch application_url(@application), params: { application: { description: @application.description, link: @application.link, name: @application.name, price: @application.price, status: @application.status, platform: @application.platform, version: @application.version, developer: @application.developer } }
     assert_redirected_to application_url(@application)
   end
 

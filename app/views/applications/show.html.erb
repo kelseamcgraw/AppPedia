@@ -11,6 +11,9 @@
         <h3><%= @application.name %></h3>
         <p><%= number_to_currency(@application.price) %></p>
         <p><%= @application.description %></p>
+        <p>Platform: <%= @application.platform %></p>
+        <p>Version: <%= @application.version %></p>
+        <p>Developer: <%= @application.developer %></p>
         <a href="http://<%= @application.link %>" target="_blank">Buy app</a>
     </div>
 </div>

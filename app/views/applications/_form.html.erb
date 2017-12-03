@@ -28,6 +28,26 @@
       <%= form.text_field :link, id: :application_link, class: "form-control col-sm-10" %>
   </div>
   <div class="form-group row">
+      <%= form.label :platform, class: "col-sm-2 col-form-label" %>
+        <div class="form-check form-check-inline">
+        <%= form.radio_button :platform, 'Apple', :checked => true %> 
+        <%= label :platform_apple, 'Apple', class: "form-check-label" %>
+      </div>
+        <div class="form-check form-check-inline">
+        <%= form.radio_button :platform, 'Android' %>
+        <%= label :platform_android, 'Android', class: "form-check-label" %>
+      </div>
+  </div>
+
+  <div class="form-group row">
+      <%= form.label :version, class: "col-sm-2 col-form-label" %>
+      <%= form.text_field :version, id: :application_version, class: "form-control col-sm-10" %>
+  </div>
+  <div class="form-group row">
+      <%= form.label :developer, class: "col-sm-2 col-form-label" %>
+      <%= form.text_field :developer, id: :application_developer, class: "form-control col-sm-10" %>
+  </div>
+  <div class="form-group row">
       <%= form.label :image, class: "col-sm-2 col-form-label" %>
       <%= form.file_field :image, class: "form-control col-sm-10", id: :application_image %>
   </div>
