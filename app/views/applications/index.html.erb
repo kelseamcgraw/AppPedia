@@ -34,9 +34,16 @@
           <p class="card-text"><strong><%= application.name %></strong><br/>
               <%= application.description %><br/>
               <%= number_to_currency(application.price) %><br/>
+              
+            <% if user_signed_in? %>
+                <%= link_to 'Show', application, class: "btn btn-link" %>
+                <%= link_to 'Edit', edit_application_path(application), class: "btn btn-link" %>
+	            <%= link_to 'Comments', commontator_thread(application), class: "btn btn-link" %>
+            <% else %>
               <%= link_to 'Show', application, class: "btn btn-link" %>
-              <%= link_to 'Edit', edit_application_path(application), class: "btn btn-link" %>
-	      <%= link_to 'Comments', commontator_thread(application), class: "btn btn-link" %>
+              <%= link_to 'Comments', commontator_thread(application), class: "btn btn-link" %>
+            <% end %>
+              
 <!--              <%= link_to 'Destroy', application, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>-->
             </p>
                 </div>
