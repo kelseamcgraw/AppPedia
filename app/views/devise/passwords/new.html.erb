@@ -1,3 +1,17 @@
+<script type="text/javascript">
+document.getElementById("other")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("thing").click();
+    }
+});
+  function myfunction() {
+  alert("Great! We will be sending an email to you shortly, and you can follow the instructions. While you wait, go back home");
+  window.location.href = '/applications#index'
+  //echo <a href='google.com'>test</a>
+}  
+</script>
 <div class="container">
 
   <form class="form-signin">
@@ -6,9 +20,9 @@
       
     <h2 class="form-signin-heading">Forgot your password?</h2>
     <%= f.label :email, class: "sr-only" %>
-      <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email Address" %>
+      <%= f.email_field :email, autofocus: true, class: "form-control",id:'other' ,placeholder: "Email Address" %>
       <br/>
-      <%= f.submit "Reset password", class: "btn btn-lg btn-primary btn-block" %>
+      <button class="btn btn-lg btn-primary btn-block" type="button" id='thing' onclick='myfunction()'>Reset Password</button>
       <p><%= render "devise/shared/links" %></p>
       
       <% end %>
