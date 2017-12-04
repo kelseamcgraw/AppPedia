@@ -482,3 +482,692 @@ ApplicationTest: test_invalid_name_gives_error_message
   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 00:48:32.559478"], ["updated_at", "2017-12-04 00:48:32.559478"]]
   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.6ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.9ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:06.816246', '2017-12-04 01:42:06.816246', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:06.816246', '2017-12-04 01:42:06.816246', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:06.823175', '2017-12-04 01:42:06.823175', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:06.823175', '2017-12-04 01:42:06.823175', 728652161)[0m
+  [1m[36mFixture Delete (1.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:06.840230', '2017-12-04 01:42:06.840230', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:06.840230', '2017-12-04 01:42:06.840230', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:06.842801', '2017-12-04 01:42:06.842801', 215012207)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:06.842801', '2017-12-04 01:42:06.842801', 728652161)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.098024', '2017-12-04 01:42:07.098024', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.098024', '2017-12-04 01:42:07.098024', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.100489', '2017-12-04 01:42:07.100489', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.100489', '2017-12-04 01:42:07.100489', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.107859', '2017-12-04 01:42:07.107859', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.107859', '2017-12-04 01:42:07.107859', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.109544', '2017-12-04 01:42:07.109544', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.109544', '2017-12-04 01:42:07.109544', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.118005', '2017-12-04 01:42:07.118005', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.118005', '2017-12-04 01:42:07.118005', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.119848', '2017-12-04 01:42:07.119848', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.119848', '2017-12-04 01:42:07.119848', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.127291', '2017-12-04 01:42:07.127291', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.127291', '2017-12-04 01:42:07.127291', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.129140', '2017-12-04 01:42:07.129140', 215012207)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.129140', '2017-12-04 01:42:07.129140', 728652161)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.138426', '2017-12-04 01:42:07.138426', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.138426', '2017-12-04 01:42:07.138426', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.140528', '2017-12-04 01:42:07.140528', 215012207)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.140528', '2017-12-04 01:42:07.140528', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.149773', '2017-12-04 01:42:07.149773', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.149773', '2017-12-04 01:42:07.149773', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.152797', '2017-12-04 01:42:07.152797', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.152797', '2017-12-04 01:42:07.152797', 728652161)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.160701', '2017-12-04 01:42:07.160701', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.160701', '2017-12-04 01:42:07.160701', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.162704', '2017-12-04 01:42:07.162704', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.162704', '2017-12-04 01:42:07.162704', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.171688', '2017-12-04 01:42:07.171688', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.171688', '2017-12-04 01:42:07.171688', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.175669', '2017-12-04 01:42:07.175669', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.175669', '2017-12-04 01:42:07.175669', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.187855', '2017-12-04 01:42:07.187855', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.187855', '2017-12-04 01:42:07.187855', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.191988', '2017-12-04 01:42:07.191988', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.191988', '2017-12-04 01:42:07.191988', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:07.201809', '2017-12-04 01:42:07.201809', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:07.201809', '2017-12-04 01:42:07.201809', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:07.203712', '2017-12-04 01:42:07.203712', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:07.203712', '2017-12-04 01:42:07.203712', 728652161)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.610172', '2017-12-04 01:42:21.610172', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.610172', '2017-12-04 01:42:21.610172', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.614367', '2017-12-04 01:42:21.614367', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.614367', '2017-12-04 01:42:21.614367', 728652161)[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (2.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.630565', '2017-12-04 01:42:21.630565', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.630565', '2017-12-04 01:42:21.630565', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.632512', '2017-12-04 01:42:21.632512', 215012207)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.632512', '2017-12-04 01:42:21.632512', 728652161)[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.645829', '2017-12-04 01:42:21.645829', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.645829', '2017-12-04 01:42:21.645829', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.648133', '2017-12-04 01:42:21.648133', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.648133', '2017-12-04 01:42:21.648133', 728652161)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.845308', '2017-12-04 01:42:21.845308', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.845308', '2017-12-04 01:42:21.845308', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.847297', '2017-12-04 01:42:21.847297', 215012207)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.847297', '2017-12-04 01:42:21.847297', 728652161)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (2.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.859152', '2017-12-04 01:42:21.859152', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.859152', '2017-12-04 01:42:21.859152', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.860983', '2017-12-04 01:42:21.860983', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.860983', '2017-12-04 01:42:21.860983', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.868228', '2017-12-04 01:42:21.868228', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.868228', '2017-12-04 01:42:21.868228', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.870306', '2017-12-04 01:42:21.870306', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.870306', '2017-12-04 01:42:21.870306', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.879257', '2017-12-04 01:42:21.879257', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.879257', '2017-12-04 01:42:21.879257', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.881743', '2017-12-04 01:42:21.881743', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.881743', '2017-12-04 01:42:21.881743', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.889324', '2017-12-04 01:42:21.889324', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.889324', '2017-12-04 01:42:21.889324', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.892238', '2017-12-04 01:42:21.892238', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.892238', '2017-12-04 01:42:21.892238', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.899258', '2017-12-04 01:42:21.899258', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.899258', '2017-12-04 01:42:21.899258', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.901149', '2017-12-04 01:42:21.901149', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.901149', '2017-12-04 01:42:21.901149', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.909382', '2017-12-04 01:42:21.909382', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.909382', '2017-12-04 01:42:21.909382', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.911153', '2017-12-04 01:42:21.911153', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.911153', '2017-12-04 01:42:21.911153', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.918200', '2017-12-04 01:42:21.918200', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.918200', '2017-12-04 01:42:21.918200', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.919884', '2017-12-04 01:42:21.919884', 215012207)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.919884', '2017-12-04 01:42:21.919884', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:42:21.929397', '2017-12-04 01:42:21.929397', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:42:21.929397', '2017-12-04 01:42:21.929397', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:42:21.931159', '2017-12-04 01:42:21.931159', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:42:21.931159', '2017-12-04 01:42:21.931159', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:45:14.006996', '2017-12-04 01:45:14.006996', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:45:14.006996', '2017-12-04 01:45:14.006996', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:45:14.011881', '2017-12-04 01:45:14.011881', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:45:14.011881', '2017-12-04 01:45:14.011881', 728652161)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:45:14.015127', '2017-12-04 01:45:14.015127', 994283606)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:45:14.015127', '2017-12-04 01:45:14.015127', 283483334)[0m
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+ApplicationTest: test_invalid_name_gives_error_message
+------------------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:45:14.103946"], ["updated_at", "2017-12-04 01:45:14.103946"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationTest: test_valid_with_all_attributes
+-----------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:45:14.112776"], ["updated_at", "2017-12-04 01:45:14.112776"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_update_application
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+ApplicationsControllerTest: test_should_show_application
+--------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+ApplicationsControllerTest: test_should_destroy_application
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+ApplicationsControllerTest: test_should_get_index
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationsControllerTest: test_should_get_new
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ApplicationsControllerTest: test_should_get_edit
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_create_application
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+PagesControllerTest: test_should_get_about
+------------------------------------------
+Started GET "/pages/about" for 127.0.0.1 at 2017-12-03 20:45:14 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (5.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 514ms (Views: 503.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PagesControllerTest: test_should_get_contact
+--------------------------------------------
+Started GET "/pages/contact" for 127.0.0.1 at 2017-12-03 20:45:14 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UserTest: test_valid_with_all_attributes
+----------------------------------------
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 994283606], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (2.2ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.8ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:46:13.097879', '2017-12-04 01:46:13.097879', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:46:13.097879', '2017-12-04 01:46:13.097879', 298486374)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:46:13.104949', '2017-12-04 01:46:13.104949', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:46:13.104949', '2017-12-04 01:46:13.104949', 728652161)[0m
+  [1m[36mFixture Delete (1.7ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:46:13.109534', '2017-12-04 01:46:13.109534', 994283606)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:46:13.109534', '2017-12-04 01:46:13.109534', 283483334)[0m
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UserTest: test_valid_with_all_attributes
+----------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 994283606], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationsControllerTest: test_should_get_new
+-----------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_update_application
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+ApplicationsControllerTest: test_should_get_index
+-------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+ApplicationsControllerTest: test_should_destroy_application
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_create_application
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+ApplicationsControllerTest: test_should_show_application
+--------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ApplicationsControllerTest: test_should_get_edit
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+ApplicationTest: test_invalid_name_gives_error_message
+------------------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:46:13.464638"], ["updated_at", "2017-12-04 01:46:13.464638"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationTest: test_valid_with_all_attributes
+-----------------------------------------------
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:46:13.473779"], ["updated_at", "2017-12-04 01:46:13.473779"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+PagesControllerTest: test_should_get_about
+------------------------------------------
+Started GET "/pages/about" for 127.0.0.1 at 2017-12-03 20:46:13 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (9.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 520ms (Views: 509.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PagesControllerTest: test_should_get_contact
+--------------------------------------------
+Started GET "/pages/contact" for 127.0.0.1 at 2017-12-03 20:46:14 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (2.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.8ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:47:24.418686', '2017-12-04 01:47:24.418686', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:47:24.418686', '2017-12-04 01:47:24.418686', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 01:47:24.425922', '2017-12-04 01:47:24.425922', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 01:47:24.425922', '2017-12-04 01:47:24.425922', 728652161)[0m
+  [1m[36mFixture Delete (1.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 01:47:24.430620', '2017-12-04 01:47:24.430620', 994283606)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 01:47:24.430620', '2017-12-04 01:47:24.430620', 283483334)[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_update_application
+----------------------------------------------------------
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+Started PATCH "/applications/215012207" for 127.0.0.1 at 2017-12-03 20:47:24 -0500
+Processing by ApplicationsController#update as HTML
+  Parameters: {"application"=>{"description"=>"Tells you the weather", "link"=>"www.weather.com", "name"=>"Weather", "price"=>"9.99", "status"=>"false", "platform"=>"Android", "version"=>"1.0.0", "developer"=>"Alyssa Melendez"}, "id"=>"215012207"}
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:47:24.779064"], ["updated_at", "2017-12-04 01:47:24.779064"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/applications/215012207
+Completed 302 Found in 65ms (ActiveRecord: 2.9ms)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ApplicationsControllerTest: test_should_get_edit
+------------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+Started GET "/applications/215012207/edit" for 127.0.0.1 at 2017-12-03 20:47:24 -0500
+Processing by ApplicationsController#edit as HTML
+  Parameters: {"id"=>"215012207"}
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  Rendering applications/edit.html.erb within layouts/application
+  Rendered applications/_form.html.erb (20.3ms)
+  Rendered applications/edit.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_header.html.erb (9.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 535ms (Views: 532.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+ApplicationsControllerTest: test_should_destroy_application
+-----------------------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "applications"[0m
+Started DELETE "/applications/215012207" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by ApplicationsController#destroy as HTML
+  Parameters: {"id"=>"215012207"}
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "applications" WHERE "applications"."id" = ?[0m  [["id", 215012207]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/applications
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "applications"[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_create_application
+----------------------------------------------------------
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "applications"[0m
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"application"=>{"description"=>"Tells you the weather", "link"=>"www.weather.com", "name"=>"Weather", "price"=>"9.99", "status"=>"false", "platform"=>"Android", "version"=>"1.0.0", "developer"=>"Alyssa Melendez"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "created_at", "updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Weather"], ["description", "Tells you the weather"], ["price", 9.99], ["link", "www.weather.com"], ["status", "f"], ["created_at", "2017-12-04 01:47:25.360931"], ["updated_at", "2017-12-04 01:47:25.360931"], ["platform", "Android"], ["version", "1.0.0"], ["developer", "Alyssa Melendez"]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 728652162], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 728652162], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 728652162], ["created_at", "2017-12-04 01:47:25.367378"], ["updated_at", "2017-12-04 01:47:25.367378"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/applications/728652162
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "applications"[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" ORDER BY "applications"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+ApplicationsControllerTest: test_should_show_application
+--------------------------------------------------------
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+Started GET "/applications/215012207" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"215012207"}
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  Rendered applications/show.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationsControllerTest: test_should_get_new
+-----------------------------------------------
+  [1m[36mApplication Load (1.0ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (5.2ms)
+  Rendered applications/new.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+ApplicationsControllerTest: test_should_get_index
+-------------------------------------------------
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+Started GET "/applications" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  [1m[36mCommontator::Thread Load (0.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 728652161], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 728652161], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 728652161], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 728652161], ["created_at", "2017-12-04 01:47:25.442206"], ["updated_at", "2017-12-04 01:47:25.442206"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 1]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (20.3ms)
+  Rendered applications/index.html.erb within layouts/application (39.4ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 40.5ms | ActiveRecord: 1.9ms)
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+ApplicationTest: test_invalid_name_gives_error_message
+------------------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:47:25.485308"], ["updated_at", "2017-12-04 01:47:25.485308"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationTest: test_valid_with_all_attributes
+-----------------------------------------------
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 01:47:25.492589"], ["updated_at", "2017-12-04 01:47:25.492589"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------
+UserTest: test_valid_with_all_attributes
+----------------------------------------
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 994283606], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+PagesControllerTest: test_should_get_about
+------------------------------------------
+Started GET "/pages/about" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PagesControllerTest: test_should_get_contact
+--------------------------------------------
+Started GET "/pages/contact" for 127.0.0.1 at 2017-12-03 20:47:25 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

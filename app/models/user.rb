@@ -7,4 +7,6 @@ class User < ActiveRecord::Base
     validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
     User.connection
      acts_as_commontator
+    
+    validates :email, presence: true;
 end
