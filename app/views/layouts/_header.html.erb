@@ -67,9 +67,7 @@
                 <br/>
                 
                 <strong><a href="#" class="text-white">Show All</a></strong>
-<!--                    <button type="button" class="btn btn-light btn-sm">Show All</button> -->
-                
-                
+<!--                    <button type="button" class="btn btn-light btn-sm">Show All</button> -->    
             </div>
           </div>
         </div>
@@ -78,7 +76,9 @@
         <div class="container d-flex justify-content-between">
           <a href="/" class="navbar-brand">AppPedia</a>
           <% if current_user %>
-          <li class="round-image-50"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
+          <ul class="navbar-nav ml-auto">
+          <li class="round-image-50" style="margin-right:10px"><%= image_tag(current_user.avatar.url(:thumb)) %></li>
+          </ul>
           <% end %>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
