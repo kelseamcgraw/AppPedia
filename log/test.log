@@ -384,3 +384,101 @@
   [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "admin_users" ("created_at", "updated_at", "id") VALUES ('2017-12-03 22:04:51.756338', '2017-12-03 22:04:51.756338', 298486374)[0m
   [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
   [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (2.3ms)[0m  [1m[31mDELETE FROM "admin_users"[0m
+  [1m[36mFixture Insert (0.8ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 00:48:20.125628', '2017-12-04 00:48:20.125628', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 00:48:20.125628', '2017-12-04 00:48:20.125628', 298486374)[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "applications"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('Weather', 'Tells you the weather', 9.99, 'www.weather.com', 'f', 'Android', '1.0.0', 'Alyssa Melendez', '2017-12-04 00:48:20.133082', '2017-12-04 00:48:20.133082', 215012207)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "status", "platform", "version", "developer", "created_at", "updated_at", "id") VALUES ('GroupMe', 'A group messaging app', 0.99, 'www.groupme.com', 't', 'Apple', '2.0.0', 'Kelsea McGraw', '2017-12-04 00:48:20.133082', '2017-12-04 00:48:20.133082', 728652161)[0m
+  [1m[36mFixture Delete (1.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('melendak@miamioh.edu', '2017-12-04 00:48:20.137382', '2017-12-04 00:48:20.137382', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "created_at", "updated_at", "id") VALUES ('mcgrawkr@miamioh.edu', '2017-12-04 00:48:20.137382', '2017-12-04 00:48:20.137382', 298486374)[0m
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+ApplicationsControllerTest: test_should_show_application
+--------------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationsControllerTest: test_should_get_new
+-----------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ApplicationsControllerTest: test_should_get_edit
+------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_update_application
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+ApplicationsControllerTest: test_should_create_application
+----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------
+ApplicationsControllerTest: test_should_get_index
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------
+ApplicationsControllerTest: test_should_destroy_application
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+PagesControllerTest: test_should_get_about
+------------------------------------------
+Started GET "/pages/about" for 127.0.0.1 at 2017-12-03 19:48:20 -0500
+Processing by PagesController#about as HTML
+  Rendering pages/about.html.erb within layouts/application
+  Rendered pages/about.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (6.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 11949ms (Views: 11937.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+PagesControllerTest: test_should_get_contact
+--------------------------------------------
+Started GET "/pages/contact" for 127.0.0.1 at 2017-12-03 19:48:32 -0500
+Processing by PagesController#contact as HTML
+  Rendering pages/contact.html.erb within layouts/application
+  Rendered pages/contact.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+ApplicationTest: test_valid_with_all_attributes
+-----------------------------------------------
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 00:48:32.549306"], ["updated_at", "2017-12-04 00:48:32.549306"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------
+ApplicationTest: test_invalid_name_gives_error_message
+------------------------------------------------------
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Load (0.1ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 215012207], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 215012207], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 215012207], ["created_at", "2017-12-04 00:48:32.559478"], ["updated_at", "2017-12-04 00:48:32.559478"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m

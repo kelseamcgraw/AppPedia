@@ -20546,3 +20546,625 @@ Processing by ApplicationsController#index as HTML
 Completed 200 OK in 214ms (Views: 211.1ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-03 19:28:26 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.9ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 4952ms (Views: 4934.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-12-03 19:28:36 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (24.4ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 330ms (Views: 280.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-12-03 19:28:40 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QbBtQsff2Zqsiad9APY4qR7F7TR/FTgQN93jdJqFH7CPRpZl7q3qAvOCygzTDSWPhfcvAhjqKpvosmauEToPrw==", "user"=>{"email"=>"melendak@miamioh.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "melendak@miamioh.edu"], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "melendak@miamioh.edu"], ["encrypted_password", "$2a$11$HuNiVpfBvQL7WMHEe4JSNO58xfT/A4Dy7.5xo3IhH7H01xtJwAqmi"], ["created_at", "2017-12-04 00:28:41.213053"], ["updated_at", "2017-12-04 00:28:41.213053"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", "2017-12-04 00:28:41.220534"], ["last_sign_in_at", "2017-12-04 00:28:41.220534"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", "2017-12-04 00:28:41.221539"], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 270ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 19:28:41 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 451ms (Views: 446.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 19:28:47 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (15.5ms)
+  Rendered applications/new.html.erb within layouts/application (18.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (4.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 300ms (Views: 254.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 19:29:45 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y+LHLXIQjsgQtCfKVmkSq4/ZIJUZfRoYEgw+CsYVR4q3nC0chGHdvV/9Wico2NawEe/2uLjSR/L/dCG7ymnA6A==", "application"=>{"name"=>"Photos", "description"=>"This is an app for photos", "price"=>"0.00", "link"=>"photos.com", "platform"=>"Apple", "version"=>"0.0.0", "developer"=>"Apple Inc.", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe4dcd68170 @tempfile=#<Tempfile:/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/RackMultipart20171203-1026-vedpzs.png>, @original_filename="photos.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"application[image]\"; filename=\"photos.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Application"}
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-dm3k3b.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1f0i26c.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1f0i26c.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1f0i26c.png[0]' -auto-orient -resize "200>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/6f549c1d5ede63d8808ae345d338b67020171203-1026-5i3sfu'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1f0i26c.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1f0i26c.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1f0i26c.png[0]' -auto-orient -resize "100x100>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/6f549c1d5ede63d8808ae345d338b67020171203-1026-1hzah0c'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/d68f0b43acf6d58599009d506a6f9c7820171203-1026-1uv7vqr.png'
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Photos"], ["description", "This is an app for photos"], ["price", 0.0], ["link", "photos.com"], ["created_at", "2017-12-04 00:29:46.304480"], ["updated_at", "2017-12-04 00:29:46.304480"], ["image_file_name", "photos.png"], ["image_content_type", "image/png"], ["image_file_size", 88152], ["image_updated_at", "2017-12-04 00:29:45.931201"], ["platform", "Apple"], ["version", "0.0.0"], ["developer", "Apple Inc."]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 1], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 1], ["created_at", "2017-12-04 00:29:46.324206"], ["updated_at", "2017-12-04 00:29:46.324206"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/applications/1
+Completed 302 Found in 413ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/applications/1" for 127.0.0.1 at 2017-12-03 19:29:46 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 351ms (Views: 345.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2017-12-03 19:29:52 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 286ms (Views: 279.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2017-12-03 19:30:08 -0500
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (2.1ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (60.7ms)
+Completed 200 OK in 353ms (Views: 327.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-12-03 19:30:11 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/vM9b4wcllO9SZAz/oXLzJqCVZvurS+nqLi4uJ1eiqATpVC9l0TX9uJvUeiofHPcB4LbcTQSMFG5OuHiEc+6Xg==", "admin_user"=>{"email"=>"abc@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "abc@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.7ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/vM9b4wcllO9SZAz/oXLzJqCVZvurS+nqLi4uJ1eiqATpVC9l0TX9uJvUeiofHPcB4LbcTQSMFG5OuHiEc+6Xg==", "admin_user"=>{"email"=>"abc@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.4ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (33.8ms)
+Completed 200 OK in 382ms (Views: 211.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-12-03 19:30:25 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3EbpUEOJiycUr0+GTWzjT6isTMFs7wk7CeEACwqIybAxEISCWNHKgkuJjl0blVtfNazCK7ZQFs0YY1lRhhn5Tg==", "admin_user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.3ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3EbpUEOJiycUr0+GTWzjT6isTMFs7wk7CeEACwqIybAxEISCWNHKgkuJjl0blVtfNazCK7ZQFs0YY1lRhhn5Tg==", "admin_user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.6ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (40.6ms)
+Completed 200 OK in 448ms (Views: 280.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-12-03 19:30:30 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6D74yThpNek59YGwpjBZapzKyEbEiqdxWbcWyz5cAk0FaJUbIzF0TGbTQGvwyeF6AcpGrB41uIdINU+Rss0ysw==", "admin_user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.3ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6D74yThpNek59YGwpjBZapzKyEbEiqdxWbcWyz5cAk0FaJUbIzF0TGbTQGvwyeF6AcpGrB41uIdINU+Rss0ysw==", "admin_user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (33.5ms)
+Completed 200 OK in 411ms (Views: 241.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-12-03 19:30:39 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b6jjyGzU1eF1nSNrAlqEml/NTWfjFT+rxJxN534qQIuC/o4ad4yURCq74rBUozyKws3DjTmqIF3VHhS98rtwdQ==", "admin_user"=>{"email"=>"abc@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "abc@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b6jjyGzU1eF1nSNrAlqEml/NTWfjFT+rxJxN534qQIuC/o4ad4yURCq74rBUozyKws3DjTmqIF3VHhS98rtwdQ==", "admin_user"=>{"email"=>"abc@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (37.8ms)
+Completed 200 OK in 402ms (Views: 229.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/password/new" for 127.0.0.1 at 2017-12-03 19:30:42 -0500
+Processing by ActiveAdmin::Devise::PasswordsController#new as HTML
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.3ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (20.6ms)
+Completed 200 OK in 241ms (Views: 227.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/password" for 127.0.0.1 at 2017-12-03 19:30:45 -0500
+Processing by ActiveAdmin::Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xv2ZIDUd8b1rn1xxca745QECv7oTpTKMgCFyzXSpU5izq/TyLkWwGDS5naonV0D1nAIxUMkaLXqRoyuX+DhjZg==", "admin_user"=>{"email"=>"abc@example.com"}, "commit"=>"Reset My Password"}
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "abc@example.com"], ["LIMIT", 1]]
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (23.3ms)
+Completed 200 OK in 256ms (Views: 201.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/admin/password" for 127.0.0.1 at 2017-12-03 19:31:30 -0500
+Processing by ActiveAdmin::Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FWef9eEVmMXZB4OXrq034X0733lNuIC1UVOSgHzCNnP4MfIn+k3ZYIYhQkz4VI/x4DtRk5cHn0NA0cva8FMGjQ==", "admin_user"=>{"email"=>"mcgrawkr@miamioh.edu"}, "commit"=>"Reset My Password"}
+  [1m[36mAdminUser Load (0.9ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "mcgrawkr@miamioh.edu"], ["LIMIT", 1]]
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (33.7ms)
+Completed 200 OK in 333ms (Views: 273.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/password" for 127.0.0.1 at 2017-12-03 19:31:32 -0500
+Processing by ActiveAdmin::Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X6YrkqyYcHVTUnz99qX+vsV2y+1wuTbW5O7yyV9WPn6y8EZAt8Ax0Ax0vSagXEauWHZFB6oGKSD1bKuT08cOgA==", "admin_user"=>{"email"=>"mcgrawkr@miamioh.edu"}, "commit"=>"Reset My Password"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "mcgrawkr@miamioh.edu"], ["LIMIT", 1]]
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/passwords/new.html.erb within layouts/active_admin_logged_out (23.1ms)
+Completed 200 OK in 337ms (Views: 283.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2017-12-03 19:31:51 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 294ms (Views: 288.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 19:31:58 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.8ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 257ms (Views: 252.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 19:32:03 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (6.5ms)
+  Rendered applications/new.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 252ms (Views: 245.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 19:32:21 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 308ms (Views: 303.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 19:52:54 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (19.8ms)
+  Rendered applications/new.html.erb within layouts/application (33.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (29.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 480ms (Views: 460.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 19:52:57 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8pvAZxEkWCEByr1afTDpUiw3gGKAtVCmS6Y/Ll+9f8Mm5SpW51ULVE6DwLcDgS1JsgFWTyEaDUym3iCfU8H4oQ==", "application"=>{"name"=>"", "description"=>"hi", "price"=>"", "link"=>"", "platform"=>"Apple", "version"=>"", "developer"=>""}, "commit"=>"Create Application"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (16.0ms)
+  Rendered applications/new.html.erb within layouts/application (19.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 467ms (Views: 447.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2017-12-03 19:56:43 -0500
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+S3P15g1uZgPXgxJNvjHdcFXauaOVHXjHMLGaBodBhEUe6IFg234PVB4zZJgAX9lXFfkDFTrahUNQJ8ylow27w==", "admin_user"=>{"email"=>"abc@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["email", "abc@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 5ms (ActiveRecord: 1.0ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+S3P15g1uZgPXgxJNvjHdcFXauaOVHXjHMLGaBodBhEUe6IFg234PVB4zZJgAX9lXFfkDFTrahUNQJ8ylow27w==", "admin_user"=>{"email"=>"abc@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendering /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/shared/_links.erb (1.7ms)
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activeadmin-1.1.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (48.7ms)
+Completed 200 OK in 459ms (Views: 290.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 19:59:50 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.8ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 342ms (Views: 336.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/applications/1" for 127.0.0.1 at 2017-12-03 19:59:56 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 275ms (Views: 268.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 20:11:45 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.9ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (48.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 541ms (Views: 522.0ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 20:11:46 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (13.4ms)
+  Rendered applications/new.html.erb within layouts/application (19.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 360ms (Views: 353.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 20:13:11 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WONVUAsE3QLLF6tsEUqMmlA9w2JpUVFpNGUyFcGBzMyMnb9h/XWOd4Re1oFv+0iBzgsVT8j+DIPZHS2kzf1Lrg==", "application"=>{"name"=>"Flappy Bird", "description"=>"An app with a jumping bird", "price"=>"1.99", "link"=>"flappybird.com", "platform"=>"Apple", "version"=>"2.0.0", "developer"=>"Dong Nguyen", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe4dbf1dc28 @tempfile=#<Tempfile:/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/RackMultipart20171203-1026-1gfjs0d.png>, @original_filename="flappyBird.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"application[image]\"; filename=\"flappyBird.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Application"}
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1pc89kj.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1ehmcvd.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1ehmcvd.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1ehmcvd.png[0]' -auto-orient -resize "200>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/e0fc03db98d237a68cb05d7755bb070e20171203-1026-10kzzer'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1ehmcvd.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1ehmcvd.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1ehmcvd.png[0]' -auto-orient -resize "100x100>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/e0fc03db98d237a68cb05d7755bb070e20171203-1026-1dyal9h'
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/25592f8ca33cfab9b75327b71e20ea2f20171203-1026-1e3y1si.png'
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Flappy Bird"], ["description", "An app with a jumping bird"], ["price", 1.99], ["link", "flappybird.com"], ["created_at", "2017-12-04 01:13:11.559483"], ["updated_at", "2017-12-04 01:13:11.559483"], ["image_file_name", "flappyBird.png"], ["image_content_type", "image/png"], ["image_file_size", 19358], ["image_updated_at", "2017-12-04 01:13:11.159715"], ["platform", "Apple"], ["version", "2.0.0"], ["developer", "Dong Nguyen"]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 2], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 2], ["created_at", "2017-12-04 01:13:11.569702"], ["updated_at", "2017-12-04 01:13:11.569702"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/applications/2
+Completed 302 Found in 444ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/applications/2" for 127.0.0.1 at 2017-12-03 20:13:11 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 365ms (Views: 360.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2017-12-03 20:13:13 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 245ms (Views: 239.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications/2" for 127.0.0.1 at 2017-12-03 20:13:22 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 297ms (Views: 291.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2017-12-03 20:13:24 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 257ms (Views: 253.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 20:13:27 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (8.7ms)
+  Rendered applications/new.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 224ms (Views: 221.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 20:14:33 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QdOqhV6RtcfXRciDqTAM5GV47Stlrn0CL5Akmy8BDmaVrUC0qODmspgMtW7Xgcj/+047BsQBIOjC6DsqI32JBA==", "application"=>{"name"=>"Weather", "description"=>"This app gives a report of the weather", "price"=>"3.99", "link"=>"weather.com", "platform"=>"Android", "version"=>"3.0.1", "developer"=>"The Weather Channel", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe4de8c2268 @tempfile=#<Tempfile:/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/RackMultipart20171203-1026-ndx930.png>, @original_filename="weather.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"application[image]\"; filename=\"weather.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Application"}
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-1dd3mfc.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-4fipgl.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-4fipgl.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-4fipgl.png[0]' -auto-orient -resize "200>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/bd3c88e2a988b63da7714cda7061e98220171203-1026-1f7c1xe'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-4fipgl.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-4fipgl.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-4fipgl.png[0]' -auto-orient -resize "100x100>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/bd3c88e2a988b63da7714cda7061e98220171203-1026-1ps4l3t'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/aab92e69374e4c7b8c6741fe02e574b920171203-1026-14dv01x.png'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Weather"], ["description", "This app gives a report of the weather"], ["price", 3.99], ["link", "weather.com"], ["created_at", "2017-12-04 01:14:34.412867"], ["updated_at", "2017-12-04 01:14:34.412867"], ["image_file_name", "weather.png"], ["image_content_type", "image/png"], ["image_file_size", 549869], ["image_updated_at", "2017-12-04 01:14:33.709391"], ["platform", "Android"], ["version", "3.0.1"], ["developer", "The Weather Channel"]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 3], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 3], ["created_at", "2017-12-04 01:14:34.420226"], ["updated_at", "2017-12-04 01:14:34.420226"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/applications/3
+Completed 302 Found in 728ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/applications/3" for 127.0.0.1 at 2017-12-03 20:14:34 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 338ms (Views: 333.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 20:14:36 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 235ms (Views: 228.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 20:14:58 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (6.1ms)
+  Rendered applications/new.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 259ms (Views: 254.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 20:16:16 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k7YPU1haLKrx8+CMzW99qBEzAmxPImrJQEi2GmfJyS1HyOVirit/3766nWGz3rmzjwXUQe6NNyOtMKmra7VOTw==", "application"=>{"name"=>"Netflix", "description"=>"An app many college students binge watch TV series on", "price"=>"2.99", "link"=>"netflix.com", "platform"=>"Apple", "version"=>"1.0.9", "developer"=>"Netflix Inc.", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe4df43b9f0 @tempfile=#<Tempfile:/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/RackMultipart20171203-1026-1it38pk.jpg>, @original_filename="netflix.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"application[image]\"; filename=\"netflix.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Application"}
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-bc4i4w.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-111czxl.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-111czxl.jpg[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-111czxl.jpg[0]' -auto-orient -resize "200>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/b17d8f7ffaac98e516cc0f29af00f10420171203-1026-jwecle'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-111czxl.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-111czxl.jpg[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-111czxl.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/b17d8f7ffaac98e516cc0f29af00f10420171203-1026-35564u'
+  [1m[35m (0.7ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/21c603dbf852f78063f98674640ab33920171203-1026-x1miwv.jpg'
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Netflix"], ["description", "An app many college students binge watch TV series on"], ["price", 2.99], ["link", "netflix.com"], ["created_at", "2017-12-04 01:16:16.684325"], ["updated_at", "2017-12-04 01:16:16.684325"], ["image_file_name", "netflix.jpg"], ["image_content_type", "image/jpeg"], ["image_file_size", 23145], ["image_updated_at", "2017-12-04 01:16:16.364989"], ["platform", "Apple"], ["version", "1.0.9"], ["developer", "Netflix Inc."]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 4], ["created_at", "2017-12-04 01:16:16.702649"], ["updated_at", "2017-12-04 01:16:16.702649"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/applications/4
+Completed 302 Found in 395ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/applications/4" for 127.0.0.1 at 2017-12-03 20:16:16 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (16.4ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 642ms (Views: 633.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2017-12-03 20:16:19 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 300ms (Views: 296.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 20:17:24 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (11.2ms)
+  Rendered applications/new.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 298ms (Views: 293.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 20:18:10 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TM9WziX74h1oC2AS6lmo00yje7E4NRRiJWMxPps/ZZqYsbz/04qxaCdCHf+U6GzI0pWtnJmaSYjIGy6Pl0Pi+A==", "application"=>{"name"=>"Slack", "description"=>"This is the app we used for our group communication", "price"=>"9.99", "link"=>"slack.com", "platform"=>"Android", "version"=>"3.0.0", "developer"=>"Slack Inc.", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe4d8d19d58 @tempfile=#<Tempfile:/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/RackMultipart20171203-1026-1yym6ga.png>, @original_filename="Screen Shot 2017-12-03 at 8.16.55 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"application[image]\"; filename=\"Screen Shot 2017-12-03 at 8.16.55 PM.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Application"}
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/89fd826dc82432680fe18cdb4809f32120171203-1026-wkrre4.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/8a02289713c056c9070a7aab709e12ad20171203-1026-1i8lpwr.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/8a02289713c056c9070a7aab709e12ad20171203-1026-1i8lpwr.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/8a02289713c056c9070a7aab709e12ad20171203-1026-1i8lpwr.png[0]' -auto-orient -resize "200>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/bd81e755f8835becc65b881cf21106b820171203-1026-1ygfa7v'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/8a02289713c056c9070a7aab709e12ad20171203-1026-1i8lpwr.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/8a02289713c056c9070a7aab709e12ad20171203-1026-1i8lpwr.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/8a02289713c056c9070a7aab709e12ad20171203-1026-1i8lpwr.png[0]' -auto-orient -resize "100x100>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/bd81e755f8835becc65b881cf21106b820171203-1026-1i73su6'
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/89fd826dc82432680fe18cdb4809f32120171203-1026-6jru2a.png'
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Slack"], ["description", "This is the app we used for our group communication"], ["price", 9.99], ["link", "slack.com"], ["created_at", "2017-12-04 01:18:10.662980"], ["updated_at", "2017-12-04 01:18:10.662980"], ["image_file_name", "Screen_Shot_2017-12-03_at_8.16.55_PM.png"], ["image_content_type", "image/png"], ["image_file_size", 50279], ["image_updated_at", "2017-12-04 01:18:10.380289"], ["platform", "Android"], ["version", "3.0.0"], ["developer", "Slack Inc."]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 5], ["created_at", "2017-12-04 01:18:10.673440"], ["updated_at", "2017-12-04 01:18:10.673440"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/applications/5
+Completed 302 Found in 315ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/applications/5" for 127.0.0.1 at 2017-12-03 20:18:10 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 373ms (Views: 367.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/applications" for 127.0.0.1 at 2017-12-03 20:18:12 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 239ms (Views: 232.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/applications/new" for 127.0.0.1 at 2017-12-03 20:18:42 -0500
+Processing by ApplicationsController#new as HTML
+  Rendering applications/new.html.erb within layouts/application
+  Rendered applications/_form.html.erb (7.3ms)
+  Rendered applications/new.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 295ms (Views: 290.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/applications" for 127.0.0.1 at 2017-12-03 20:20:16 -0500
+Processing by ApplicationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E3qwjCbCo9Dp0Sef3yS3lzoFA/BaQ/JqPq1tDAorN/HHBFq90LPwpaaYWnKhlXOMpDPV3fvsr4DT1XK9Blewkw==", "application"=>{"name"=>"SnapChat", "description"=>"Send pictures to your friends!", "price"=>"0.00", "link"=>"snapchat.com", "platform"=>"Apple", "version"=>"4.0.9", "developer"=>"Snapchat Inc.", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe4d8faf360 @tempfile=#<Tempfile:/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/RackMultipart20171203-1026-1jbczu1.png>, @original_filename="Screen Shot 2017-12-03 at 8.18.34 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"application[image]\"; filename=\"Screen Shot 2017-12-03 at 8.18.34 PM.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Application"}
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/0937a09e094e3aa1b5a9e35dd78d295820171203-1026-1qlrvwu.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/01179e56362397fcb4fd718e46c0478820171203-1026-1bi2n2n.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/01179e56362397fcb4fd718e46c0478820171203-1026-1bi2n2n.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/01179e56362397fcb4fd718e46c0478820171203-1026-1bi2n2n.png[0]' -auto-orient -resize "200>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/4c75da1bd789ecbb0ca0a9dd0e30c95d20171203-1026-1yg5ift'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/01179e56362397fcb4fd718e46c0478820171203-1026-1bi2n2n.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/01179e56362397fcb4fd718e46c0478820171203-1026-1bi2n2n.png[0]'
+Command :: convert '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/01179e56362397fcb4fd718e46c0478820171203-1026-1bi2n2n.png[0]' -auto-orient -resize "100x100>" '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/4c75da1bd789ecbb0ca0a9dd0e30c95d20171203-1026-14r7q68'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Command :: file -b --mime '/var/folders/jf/s2fmkh352wng2wws1wyjp6b80000gn/T/0937a09e094e3aa1b5a9e35dd78d295820171203-1026-1gh8435.png'
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "applications" ("name", "description", "price", "link", "created_at", "updated_at", "image_file_name", "image_content_type", "image_file_size", "image_updated_at", "platform", "version", "developer") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "SnapChat"], ["description", "Send pictures to your friends!"], ["price", 0.0], ["link", "snapchat.com"], ["created_at", "2017-12-04 01:20:17.258293"], ["updated_at", "2017-12-04 01:20:17.258293"], ["image_file_name", "Screen_Shot_2017-12-03_at_8.18.34_PM.png"], ["image_content_type", "image/png"], ["image_file_size", 44586], ["image_updated_at", "2017-12-04 01:20:16.995954"], ["platform", "Apple"], ["version", "4.0.9"], ["developer", "Snapchat Inc."]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCommontator::Thread Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "commontator_threads" ("commontable_type", "commontable_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["commontable_type", "Application"], ["commontable_id", 6], ["created_at", "2017-12-04 01:20:17.265014"], ["updated_at", "2017-12-04 01:20:17.265014"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/applications/6
+Completed 302 Found in 290ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/applications/6" for 127.0.0.1 at 2017-12-03 20:20:17 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered applications/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 375ms (Views: 370.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-03 20:20:18 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE (name LIKE '%%')[0m
+  Rendered applications/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 245ms (Views: 239.8ms | ActiveRecord: 0.6ms)
+
+
