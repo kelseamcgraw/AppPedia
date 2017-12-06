@@ -1,5 +1,5 @@
 <!--<p id="notice"><%= notice %></p>-->
- <div class="container">
+<div class="container" style="margin-top: 30px;">
 <div class="row">
     <div class="col-md-6">
         <div class="thumbnail">
@@ -24,5 +24,48 @@
 <% else %>
     <%= link_to 'Back', applications_path, class: "btn btn-link" %>
 <% end %>
-
 </div>
+
+<div class="container" style="margin-top: 20px;">
+<div class="row">
+<div class="col-sm-12">
+<h3>Comments</h3>
+</div><!-- /col-sm-12 -->
+</div><!-- /row -->
+<div class="row">
+<div class="col-sm-1">
+<div class="thumbnails">
+<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+</div><!-- /thumbnail -->
+</div><!-- /col-sm-1 -->
+
+<div class="col-sm-5">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>awesomeperson</strong> <span class="text-muted">commented 5 days ago</span>
+</div>
+<div class="panel-body">
+This is a comment
+</div><!-- /panel-body -->
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
+
+<div class="col-sm-1">
+<div class="thumbnails">
+<img class="img-responsive user-photo" src="https://ssl.gstatic.com/accounts/ui/avatar_2x.png">
+</div><!-- /thumbnail -->
+</div><!-- /col-sm-1 -->
+
+<div class="col-sm-5">
+<div class="panel panel-default">
+<div class="panel-heading">
+<strong>coolperson</strong> <span class="text-muted">commented 5 days ago</span>
+</div>
+<div class="panel-body">
+This is another comment
+</div><!-- /panel-body -->
+</div><!-- /panel panel-default -->
+</div><!-- /col-sm-5 -->
+</div><!-- /row -->
+
+</div><!-- /container -->

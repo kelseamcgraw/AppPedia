@@ -137,3 +137,12 @@ footer p {
     text-align: center;
     img { width: 100%; transform: translateX(0%) translateY(0%);}
 }
+.thumbnails {
+    padding:0px;
+    //border: 1px solid red;
+}
+.user-photo{
+    height:50px;
+    width:50px;
+    border-radius:2px;
+}
