@@ -5,6 +5,26 @@ class ApplicationsController < ApplicationController
   # GET /applications.json
   def index
     @applications = Application.where(["name LIKE ?","%#{params[:search]}%"])
+#    @applications = Application.where(["developer LIKE ?","%#{params[:searchDev]}%"])
+#      @applications = Application.searchNames(params[:search])
+#      @applications = Application.order('name DESC')
+      
+#        @applications = Application.all
+    if params[:orderASC].in? %w[name]
+      # adds ORDER to the scope
+      @applications.merge!( Application.order("name ASC", params[:orderASC]) )
+    end
+    if params[:orderDESC].in? %w[name]
+      # adds ORDER to the scope
+      @applications.merge!( Application.order("name DESC", params[:orderDESC]) )
+    end
+    if params[:getAndroid].in? %w[platform]
+      @applications.merge!( Application.where(["platform LIKE ?","%#{"Android"}%"]) )
+    end
+    if params[:getApple].in? %w[platform]
+      @applications.merge!( Application.where(["platform LIKE ?","%#{"Apple"}%"]) )
+    end
+      
   end
 
   # GET /applications/1

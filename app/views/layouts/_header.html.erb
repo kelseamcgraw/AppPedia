@@ -1,4 +1,5 @@
 <header>
+
       <div class="collapse bg-dark" id="navbarHeader">
         <div class="container">
           <div class="row">
@@ -28,25 +29,28 @@
                 <h4 class="text-white">Filter</h4>
                 <div class="form-check form-check-inline">
                   <label class="form-check-label text-white">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">A-Z
+                      <%= link_to "■ ⠀A-Z", applications_path(orderASC: 'name'), class: "btn btn-dark btn-sm" %>
+<!--                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="AtoZ" value="option1">A-Z-->
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label class="form-check-label text-white">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Z-A
+                      <%= link_to "■ ⠀Z-A", applications_path(orderDESC: 'name'), class: "btn btn-dark btn-sm" %>
+<!--                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ZtoA" value="option2">Z-A-->
                   </label>
                 </div>
                 
                 <br/>
                 <p class="text-white"><strong>Platform</strong></p>
+                
                 <div class="form-check form-check-inline">
                   <label class="form-check-label text-white">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">Android
+                      <%= link_to "■ ⠀Android", applications_path(getAndroid: 'platform'), class: "btn btn-dark btn-sm" %>
                   </label>
                 </div>
                 <div class="form-check form-check-inline">
                   <label class="form-check-label text-white">
-                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">Apple
+                      <%= link_to "■ ⠀Apple", applications_path(getApple: 'platform'), class: "btn btn-dark btn-sm" %>
                   </label>
                 </div>
                 
@@ -60,8 +64,9 @@
                       <input class="form-control form-control-sm" type="text" placeholder="Max">
                     </div>
                     <div class="col">
-                        <button type="button" class="btn btn-light btn-sm">Go</button> 
+                        <button onclick="filterApps()" type="button" class="btn btn-light btn-sm">Go</button>
                     </div>
+
                   </div>
                 </form>
                 <br/>
@@ -84,5 +89,27 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
+
     </div>
+    
+    <script type="text/javascript">
+    
+    function filterApps() {
+        console.log("hey");
+        if(document.getElementById('AtoZ').checked) {
+            // A to Z radio button is checked
+//            /<%= applications_path(orderASC: 'name') %>
+        }
+        else if(document.getElementById('ZtoA').checked) {
+            // Z to A radio button is checked
+//            /<%= applications_path(orderDESC: 'name') %>
+            var link = <%= link_to "Sort Z to A", applications_path(orderDESC: 'name') %>
+            $(link).trigger('click');
+            
+        }
+        
+    } // end filterApps function
+    
+    </script>
+    
 </header>
