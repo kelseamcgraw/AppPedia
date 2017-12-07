@@ -18,13 +18,13 @@
                 <div class="row">
                     <div class="col">
                         <%= form_tag applications_path, :method => 'get' do %>
-                        <%= text_field_tag :search, params[:search], class: "form-control form-control-sm", placeholder: "Search"%>
+                        <%= text_field_tag :search, params[:search], class: "form-control form-control-sm", placeholder: "Search" %>
                     </div>
                     <div class="col">
                         <%= submit_tag "Search", class: "btn btn-light btn-sm" %>
                     </div>
                 </div>
-                <% end %>
+                
                 <br/>
                 <h4 class="text-white">Filter</h4>
                 <div class="form-check form-check-inline">
@@ -56,6 +56,25 @@
                 
                 <p class="text-white"><strong>Price</strong></p>
                 <form>
+                    
+                <div class="row">
+                   <p class="text-white btn-sm">Min:</p>
+                    <div class="col">
+                         <%= text_field_tag :minPrice, params[:minPrice], class: "form-control form-control-sm", placeholder: "Min", value: "0.00"%>
+                    </div>
+                    <p class="text-white btn-sm">Max:</p>
+                    <div class="col">
+                        <%= text_field_tag :maxPrice, params[:maxPrice], class: "form-control form-control-sm", placeholder: "Max", value: "100.00" %>
+                    </div>
+                    <div class="col">
+                        <%= submit_tag "Go", class: "btn btn-light btn-sm" %>
+                    </div>
+                </div>
+                    
+                <% end %>
+                    
+                    
+<!--
                   <div class="form-row">
                     <div class="col">
                       <input class="form-control form-control-sm" type="text" placeholder="Min">
@@ -68,10 +87,11 @@
                     </div>
 
                   </div>
+-->
                 </form>
                 <br/>
                 
-                <strong><a href="#" class="text-white">Show All</a></strong>
+                <strong><a href="/" class="text-white">Show All</a></strong>
 <!--                    <button type="button" class="btn btn-light btn-sm">Show All</button> -->    
             </div>
           </div>

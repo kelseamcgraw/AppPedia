@@ -4,7 +4,16 @@ class ApplicationsController < ApplicationController
   # GET /applications
   # GET /applications.json
   def index
-    @applications = Application.where(["name LIKE ?","%#{params[:search]}%"])
+#      
+     @applications = Application.all
+      
+      if params[:minPrice].present? && params[:maxPrice].present?
+          @applications.merge!( Application.where(["name LIKE '%s' and price >= '%s' and price <= '%s'","%#{params[:search]}%", params[:minPrice], params[:maxPrice]]) )
+      end
+      
+#      User.where(["name = '%s' and email = '%s'", "Joe", "joe@example.com"])
+      
+#    @applications =  Application.where("name LIKE :search and email >= :min", { search: "%#{params[:search]}%", min: params[:minPrice] } )
 #    @applications = Application.where(["developer LIKE ?","%#{params[:searchDev]}%"])
 #      @applications = Application.searchNames(params[:search])
 #      @applications = Application.order('name DESC')
@@ -24,7 +33,17 @@ class ApplicationsController < ApplicationController
     if params[:getApple].in? %w[platform]
       @applications.merge!( Application.where(["platform LIKE ?","%#{"Apple"}%"]) )
     end
+#      if params[:showAll].in? %w[name]
+#      @applications.merge!( Application.where(["name LIKE ?","%#{""}%"]) )
+#    end
+#    if params[:minPrice].in? %w[price]
+#      @applications.merge!( Application.where("price >= ?", 200)  )
+#    end
+#    if  params[:minPrice].in? %w[price]
+#      @applications.merge!( Application.where("price >= ?", params[:minPrice] ) )
+#    end
       
+
   end
 
   # GET /applications/1
