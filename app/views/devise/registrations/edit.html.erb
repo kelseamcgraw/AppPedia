@@ -36,7 +36,11 @@
                 <%= f.file_field :avatar %>
             </div>
       </div>
-    
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="moderator"> This user is a moderator
+      </label>
+    </div>
       <div class="field">
         <%= f.label :current_password, class: "sr-only" %> <i>(we need your current password to confirm your changes)</i><br />
         <%= f.password_field :current_password, autocomplete: "off", class: "form-control", placeholder: "Current Password" %>
