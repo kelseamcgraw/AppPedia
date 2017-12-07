@@ -65,7 +65,8 @@ gem 'bootstrap', '~> 4.0.0.beta2.1'
 gem 'jquery-rails'
 # Paperclip allows users to upload images
 gem "paperclip", "~> 5.0.0"
-
+# Font Awesome icons
+gem "font-awesome-rails"
 
 
 group :production do

@@ -32963,3 +32963,178 @@ Processing by ApplicationsController#index as HTML
 Completed 200 OK in 321ms (Views: 313.8ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-07 15:58:40 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.9ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[36mCommontator::Thread Load (1.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 4]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (42.6ms)
+  [1m[36mCommontator::Thread Load (0.4ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 5]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (6.6ms)
+  [1m[36mCommontator::Thread Load (0.7ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 6]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (6.6ms)
+  Rendered applications/index.html.erb within layouts/application (188.9ms)
+Completed 500 Internal Server Error in 797ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "body ": expected selector or at-rule, was "{"):
+    4:     <title>AppPedia</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:22
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3655814345313184499_70206440900160'
+Started GET "/" for 127.0.0.1 at 2017-12-07 15:59:19 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 4]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (5.9ms)
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 5]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (4.9ms)
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 6]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (4.2ms)
+  Rendered applications/index.html.erb within layouts/application (53.8ms)
+  Rendered layouts/_header.html.erb (8.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 12895ms (Views: 12889.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-07 15:59:48 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[36mCommontator::Thread Load (0.2ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 4]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (8.6ms)
+  [1m[36mCommontator::Thread Load (0.4ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 5]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (4.6ms)
+  [1m[36mCommontator::Thread Load (0.4ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 6]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (4.9ms)
+  Rendered applications/index.html.erb within layouts/application (61.0ms)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 3.5ms)
+
+
+  
+ActionView::Template::Error (Invalid CSS after "body ": expected selector or at-rule, was "{"):
+    4:     <title>AppPedia</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    9:   </head>
+   10: 
+  
+app/assets/stylesheets/application.scss:22
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__3655814345313184499_70206416160340'
+Started GET "/" for 127.0.0.1 at 2017-12-07 16:00:41 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[36mCommontator::Thread Load (0.2ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 4]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (6.6ms)
+  [1m[36mCommontator::Thread Load (0.5ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 5]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (4.4ms)
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 6]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (4.8ms)
+  Rendered applications/index.html.erb within layouts/application (53.0ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 4166ms (Views: 4160.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-07 16:00:47 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.5ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.7ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 4]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (16.5ms)
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 5]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (18.6ms)
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 6]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (3.6ms)
+  Rendered applications/index.html.erb within layouts/application (182.7ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 7746ms (Views: 7735.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/applications/4" for 127.0.0.1 at 2017-12-07 16:01:15 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  Rendered applications/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 236ms (Views: 230.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/applications/4" for 127.0.0.1 at 2017-12-07 16:01:40 -0500
+Processing by ApplicationsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering applications/show.html.erb within layouts/application
+  Rendered applications/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 305ms (Views: 302.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-07 16:01:59 -0500
+Processing by ApplicationsController#index as HTML
+  Rendering applications/index.html.erb within layouts/application
+  [1m[36mApplication Load (0.4ms)[0m  [1m[34mSELECT "applications".* FROM "applications"[0m
+  [1m[36mCommontator::Thread Load (0.2ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 4], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 4]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (6.7ms)
+  [1m[36mCommontator::Thread Load (0.3ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 5], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.3ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 5]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (3.5ms)
+  [1m[36mCommontator::Thread Load (0.2ms)[0m  [1m[34mSELECT  "commontator_threads".* FROM "commontator_threads" WHERE "commontator_threads"."commontable_id" = ? AND "commontator_threads"."commontable_type" = ? LIMIT ?[0m  [["commontable_id", 6], ["commontable_type", "Application"], ["LIMIT", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" WHERE "applications"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "commontator_comments" WHERE "commontator_comments"."thread_id" = ?[0m  [["thread_id", 6]]
+  Rendered /Users/alyssakirstine/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/commontator-5.1.0/app/views/commontator/shared/_thread.html.erb (3.2ms)
+  Rendered applications/index.html.erb within layouts/application (50.2ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 263ms (Views: 257.4ms | ActiveRecord: 2.5ms)
+
+
